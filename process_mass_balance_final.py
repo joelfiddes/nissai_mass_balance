@@ -277,7 +277,7 @@ def main():
     """
     Main function to process and visualize mass balance data.
     """
-    input_file = "/Users/joel/src/nissai_mass_balance/Nissai_massbalance_Sangvor_PAMIR - RAW.csv"
+    input_file = "/Users/joel/src/nissai_mass_balance/Nissai_massbalance_Sangvor_PAMIR_RAW.csv"
     
     print("Processing Nissai Glacier Mass Balance Data...")
     print(f"Reading data from: {input_file}\n")
