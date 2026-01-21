@@ -19,24 +19,18 @@ This project processes and visualizes mass balance data collected from 7 measure
 
 | File | Description |
 |------|-------------|
-| `nissai_mass_balance_final.csv` | Processed measurements (stake, elevation, mass balance, year) |
-| `nissai_mass_balance_summary_final.csv` | Summary statistics by year |
+| `Nissai_massbalance_RAW.csv` | Raw field measurements |
+| `Nissai_massbalance_FINAL.csv` | Processed measurements (stake, elevation, mass balance, year) |
+| `Nissai_massbalance_SUMMARY.csv` | Summary statistics by year |
+| `process_mass_balance.py` | Full processing pipeline with 6-panel output |
 | `plot_mass_balance_simplified.py` | Generate 4-panel visualization |
-| `process_mass_balance_final.py` | Full processing pipeline with 6-panel output |
 
 ## Usage
 
 ```bash
-# Generate visualization
-python plot_mass_balance_simplified.py
+pip install -r requirements.txt
+python process_mass_balance.py
 ```
-
-## Requirements
-
-- Python 3
-- pandas
-- matplotlib
-- numpy
 
 ## License
 
