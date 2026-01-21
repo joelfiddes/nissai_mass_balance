@@ -226,8 +226,14 @@ def plot_mass_balance_comprehensive(df):
     
     plt.tight_layout()
     plt.subplots_adjust(top=0.93)
+
+    # Save to PNG
+    output_path = "/Users/joel/src/nissai_mass_balance/nissai_mass_balance_analysis.png"
+    plt.savefig(output_path, dpi=300, bbox_inches='tight', facecolor='white')
+    print(f"Saved plot to: {output_path}")
+
     plt.show()
-    
+
     return fig
 
 def create_summary_table(df):
