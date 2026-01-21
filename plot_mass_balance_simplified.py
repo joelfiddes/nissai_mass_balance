@@ -133,7 +133,7 @@ def main():
     Main function to create simplified visualization.
     """
     # Read the processed data
-    input_file = "/Users/joel/src/nissai_mass_balance/nissai_mass_balance_final.csv"
+    input_file = "/Users/joel/src/nissai_mass_balance/Nissai_massbalance_FINAL.csv"
     
     print("Creating simplified visualization with panels 1, 3, 5, and 6...")
     

@@ -277,7 +277,7 @@ def main():
     """
     Main function to process and visualize mass balance data.
     """
-    input_file = "/Users/joel/src/nissai_mass_balance/Nissai_massbalance_Sangvor_PAMIR_RAW.csv"
+    input_file = "/Users/joel/src/nissai_mass_balance/Nissai_massbalance_RAW.csv"
     
     print("Processing Nissai Glacier Mass Balance Data...")
     print(f"Reading data from: {input_file}\n")
@@ -309,13 +309,13 @@ def main():
     fig = plot_mass_balance_comprehensive(df)
     
     # Save processed data
-    output_file = "/Users/joel/src/nissai_mass_balance/nissai_mass_balance_final.csv"
+    output_file = "/Users/joel/src/nissai_mass_balance/Nissai_massbalance_FINAL.csv"
     df_sorted = df.sort_values(['Year', 'Stake', 'elevation']).reset_index(drop=True)
     df_sorted.to_csv(output_file, index=False)
     print(f"\nProcessed data saved to: {output_file}")
     
     # Save summary
-    summary_file = "/Users/joel/src/nissai_mass_balance/nissai_mass_balance_summary_final.csv"
+    summary_file = "/Users/joel/src/nissai_mass_balance/Nissai_massbalance_SUMMARY.csv"
     summary.to_csv(summary_file, index=False)
     print(f"Summary statistics saved to: {summary_file}")
     
