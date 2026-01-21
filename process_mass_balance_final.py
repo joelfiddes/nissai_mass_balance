@@ -143,7 +143,7 @@ def plot_mass_balance_comprehensive(df):
     # Plot 3: Box plot of mass balance by year (top right)
     ax3 = plt.subplot(2, 3, 3)
     data_by_year = [df[df['Year'] == year]['Mass_Balance_mwe'].values for year in years]
-    box_plot = ax3.boxplot(data_by_year, tick_labels=years, patch_artist=True)
+    box_plot = ax3.boxplot(data_by_year, labels=years, patch_artist=True)
     
     for patch, color in zip(box_plot['boxes'], colors[:len(box_plot['boxes'])]):
         patch.set_facecolor(color)
@@ -271,7 +271,7 @@ def main():
     """
     Main function to process and visualize mass balance data.
     """
-    input_file = "/Users/joel/Downloads/UPDATE_Nissai_massbalance_Sangvor_PAMIR - Sheet5.csv"
+    input_file = "/Users/joel/src/nissai_mass_balance/UPDATE_Nissai_massbalance_Sangvor_PAMIR - Sheet5.csv"
     
     print("Processing Nissai Glacier Mass Balance Data...")
     print(f"Reading data from: {input_file}\n")
@@ -303,13 +303,13 @@ def main():
     fig = plot_mass_balance_comprehensive(df)
     
     # Save processed data
-    output_file = "/Users/joel/src/TopoPyScale/nissai_mass_balance_final.csv"
+    output_file = "/Users/joel/src/nissai_mass_balance/nissai_mass_balance_final.csv"
     df_sorted = df.sort_values(['Year', 'Stake', 'elevation']).reset_index(drop=True)
     df_sorted.to_csv(output_file, index=False)
     print(f"\nProcessed data saved to: {output_file}")
     
     # Save summary
-    summary_file = "/Users/joel/src/TopoPyScale/nissai_mass_balance_summary_final.csv"
+    summary_file = "/Users/joel/src/nissai_mass_balance/nissai_mass_balance_summary_final.csv"
     summary.to_csv(summary_file, index=False)
     print(f"Summary statistics saved to: {summary_file}")
     
