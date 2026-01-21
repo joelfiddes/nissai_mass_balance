@@ -15,17 +15,12 @@ This project processes and visualizes mass balance data collected from 7 measure
 - 2024-25: Mean -3.26 m w.e.
 - Overall trend: -0.53 m w.e./year
 
-## Data
+## Files
 
 | File | Description |
 |------|-------------|
 | `nissai_mass_balance_final.csv` | Processed measurements (stake, elevation, mass balance, year) |
 | `nissai_mass_balance_summary_final.csv` | Summary statistics by year |
-
-## Scripts
-
-| Script | Description |
-|--------|-------------|
 | `plot_mass_balance_simplified.py` | Generate 4-panel visualization |
 | `process_mass_balance_final.py` | Full processing pipeline with 6-panel output |
 
